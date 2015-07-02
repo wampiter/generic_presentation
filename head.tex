@@ -1,0 +1,39 @@
+\documentclass[hyperref=pdftex, presentation]{beamer}
+% Replacing 'presentation' with 'handout' in the above line
+% will produce 4 slides per page.
+% The hyperref option makes it possible to include hyperlinks.
+
+\mode<presentation> {
+  \usetheme{CambridgeUS}
+  % or CambridgeUS, boxes, Warsaw, Madrid, many others
+   \setbeamercovered{transparent}
+  % or whatever (possibly just delete it)
+  }
+
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{times}
+\usepackage[T1]{fontenc}
+% Or whatever. Note that the encoding and the font should match. If T1
+% does not look nice, try deleting the line with the fontenc.
+
+\mode<handout>{
+\usepackage{pgfpages}
+\pgfpagesuselayout{4 on 1}[a4paper,landscape,border shrink=5mm]
+\setbeamercolor{background canvas}{bg=black!10} }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title[PAGETITLE] % (optional)
+{FRONTTITLE}
+
+\author[Scott Johnston]{Scott R. Johnston}
+\institute {Stanford\\}
+\date[\today]
+
+
+
+%;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+\begin{document}
+
+\titlepage
