@@ -8,12 +8,15 @@ def gen_pres(scans, slide = "slide_optical_combscan.tex"):
         output.write(line)
     output.write('\n')
     for number in scans:
-        filename = "scan" + str(number) + "_comb.png"
+        #ilename = "scan" + str(number) + "_comb.png"
         for line in slide:
-            line = line.replace('SCANS', filename)
-            line = line.replace('OPTICAL', 's' + str(number) + '.jpg')
+            #line = line.replace('SCANS', filename)
+            #line = line.replace('OPTICAL', 's' + str(number) + '.jpg')
             line = line.replace('SUBTITLE', '')
             line = line.replace('TITLE', 'Scan ' + str(number))
+            line = line.replace('SCAN1', 'scan' + str(number) + '_Topography.png')
+            line = line.replace('SCAN2', 'scan' + str(number) + '_MIM-Im Lifted.png')
+            line = line.replace('SCAN3', 'scan' + str(number) + '_MIM-Re Lifted.png')
             output.write(line)
         slide.seek(0)
         output.write('\n')
